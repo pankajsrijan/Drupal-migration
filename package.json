@@ -1,0 +1,34 @@
+{
+   "scripts": {
+      "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "npm run pretest"
+      }
+   },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.scss": [
+      "stylefmt",
+      "stylelint --syntax scss",
+      "git add"
+    ]
+  }, 	
+   "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-watch": "^3.1.0",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "stylefmt": "^6.0.0",
+    "stylelint": "^7.11.0",
+    "stylelint-config-standard": "^16.0.0",
+   }
+}

@@ -1,0 +1,20 @@
+project:
+  machine_name: verbose
+  prefix: verbose
+  human_name: boilerplate
+cm:
+  strategy: core-only
+git:
+  default_branch: dev
+  remotes:
+    - 'varbasedemo@svn-6123.devcloud.hosting.acquia.com:varbasedemo.git'
+drush:
+  aliases:
+    ci: self
+  default_alias: '${drush.aliases.local}'
+cloud:
+  appId: a9996275-a597-40c4-a2e8-961543d14fcf
+command-hooks:
+  post-deploy-build:
+    dir: "${repo.root}"
+    command: ./blt/scripts/frontend/frontend-setup.sh && ./blt/scripts/frontend/frontend-build.sh

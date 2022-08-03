@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -ev
+
+export PATH=${COMPOSER_BIN}:$PATH
+
+# Set git info.
+git config --global user.name "Acquia Cloud"
+git config --global user.email "noreply@acquia.com"
+
+composer validate --no-check-all --ansi
+composer install --ansi
+source ${BLT_DIR}/scripts/pipelines/setup_env
+
+nvm install 10
+nvm use 10
+
+set +v

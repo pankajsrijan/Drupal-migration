@@ -1,0 +1,48 @@
+# Application 'varbasedemo', environment 'dev'.
+dev:
+  root: /var/www/html/varbasedemo.dev/docroot
+  ac-site: varbasedemo
+  ac-env: dev
+  ac-realm: devcloud
+  uri: varbasedemogznu9xm8fu.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@varbasedemo.dev'
+    root: /mnt/gfs/varbasedemo.dev/livedev/docroot
+  host: varbasedemogznu9xm8fu.ssh.devcloud.acquia-sites.com
+  user: varbasedemo.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'varbasedemo', environment 'prod'.
+prod:
+  root: /var/www/html/varbasedemo.prod/docroot
+  ac-site: varbasedemo
+  ac-env: prod
+  ac-realm: devcloud
+  uri: varbasedemozxcuqt7idh.devcloud.acquia-sites.com
+  prod.livedev:
+    parent: '@varbasedemo.prod'
+    root: /mnt/gfs/varbasedemo.prod/livedev/docroot
+  host: varbasedemozxcuqt7idh.ssh.devcloud.acquia-sites.com
+  user: varbasedemo.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'varbasedemo', environment 'test'.
+test:
+  root: /var/www/html/varbasedemo.test/docroot
+  ac-site: varbasedemo
+  ac-env: test
+  ac-realm: devcloud
+  uri: varbasedemopjqjumxpma.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@varbasedemo.test'
+    root: /mnt/gfs/varbasedemo.test/livedev/docroot
+  host: varbasedemopjqjumxpma.ssh.devcloud.acquia-sites.com
+  user: varbasedemo.test
+  paths:
+    drush-script: drush9
+
+

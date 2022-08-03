@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.ud_paragraphs
+  module:
+    - user
+  enforced:
+    module:
+      - migrate_json
+id: node.ud_paragraphs.teaser
+targetEntityType: node
+bundle: ud_paragraphs
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
